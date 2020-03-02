@@ -12,7 +12,7 @@ import UIKit
 class SettingController {
     
     //MARK: - Info
-    let settings: [Setting] = {
+    static let settings: [Setting] = {
     
         let music = Setting(name: "Music", icon: #imageLiteral(resourceName: "iTunes"), isOn: false)
         let appStore = Setting(name: "App Store", icon: #imageLiteral(resourceName: "appStore") , isOn: false)
@@ -23,7 +23,7 @@ class SettingController {
     
     //MARK: - Methods
     
-    func toggleIsON(for setting: Setting) {
+    static func toggleIsON(for setting: Setting) {
         setting.isOn = !setting.isOn
     }
 }
